@@ -1,0 +1,16 @@
+<section class="property-biding">
+
+  <article>
+    <h3>Interpolation</h3>
+    <p>Elemento representado por interpolação: {{ url }}</p>
+    <p>O resultado de 1 + 1 é: {{ 1+1 }}</p>
+    <p>O resultado de 1 + 1 não é: {{ 1+1+getValor() }}
+  </article>
+
+  <article>
+    <h3>Property Biding</h3>
+    <img src="{{ urlImagem }}" />
+     <img [src]="urlImagem" />
+  </article>
+
+</section>
