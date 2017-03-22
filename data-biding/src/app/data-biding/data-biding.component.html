@@ -1,4 +1,4 @@
-<section class="property-biding">
+<!--<section class="property-biding">
 
   <article>
     <h3>Interpolation</h3>
@@ -13,4 +13,76 @@
      <img [src]="urlImagem" />
   </article>
 
+  <article>
+   <h3>Class e Style Biding</h3>
+   <div>
+     Selecione uma classe:
+     <select #classe (change)="0">
+       <option value="alert-success">Success</option>
+       <option value="alert-info">Info</option>
+       <option value="alert-warning">Warning</option>
+       <option value="alert-danger">Error</option>
+     </select>
+     <br><br>
+     <div class="alert {{ classe.value }}" role="alert">Texto qualquer</div>
+     
+     <div class="alert" role="alert" [class.alert-success]="classe.value=='alert-success'">Success</div>
+     <div class="alert" role="alert" [class.alert-info]="classe.value=='alert-info'">Info</div>
+     <div class="alert" role="alert" [class.alert-warning]="classe.value=='alert-warning'">Warning </div>
+     <div class="alert" role="alert" [class.alert-danger]="classe.value=='alert-danger'">Error</div>  
+
+     <div class="alert alert-danger" role="alert" [style.display]="classe.value=='alert-danger' ? 'block':'none'">Esse texto só aparece em caso de erro.</div>
+   </div>
+  </article>
+
+</section>
+
+<section class="event-biding">
+  <h3>Event Biding</h3>
+  <div>
+    <button (click)='onClick()'>Clique</button>
+    <br><br>
+    <input type="text" #campo 
+    (keyup)='onKeyup($event)' 
+    (keyup.enter)='onSave(campo.value)'
+    (blur)='onSave(campo.value)'>
+
+    <div>Conteudo Atual: {{ conteudoAtual }}</div>
+    <div>Conteudo Salvo: {{ conteudoSalvo }}</div>
+    <br><br>
+
+    <span
+    (mouseover)='onMouseSpan()'
+    (mouseout)='onMouseSpan()'
+    [class.highlight]="isMouseOver"
+    >Passe o mouse sobre mim!</span>
+  </div>
+
+</section>-->
+
+<section class="two-way-biding">
+  <article>
+    <h3>Two-way data biding</h3>
+    <div>
+      <input type="text" 
+        [value]="nome" 
+        (input)="nome = $event.target.value"
+      />
+
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome=$event"
+      />
+
+      <input type="text"
+        [(ngModel)]="nome"
+      />
+
+      <input type="text"
+        bindon-ngModel="nome"
+      />
+
+        <p>Você digitou {{ nome }}</p>
+    </div>
+  </article>
 </section>

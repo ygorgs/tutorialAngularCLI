@@ -11,8 +11,33 @@ export class DataBidingComponent implements OnInit {
 
   urlImagem:string = "http://lorempixel.com/400/200/sports/"
 
+  conteudoAtual:string = "";
+
+  conteudoSalvo:string = "";
+
+  isMouseOver = false;
+
+  nome:string = "";
+
   getValor(){
     return 1;
+  }
+
+  onClick(){
+    alert("Botão clicado")
+  }
+
+  onKeyup(event:KeyboardEvent){
+    console.log(event)
+    this.conteudoAtual = (event.target).value;
+  }
+
+  onSave(valor:string){
+    this.conteudoSalvo = valor;
+  }
+
+  onMouseSpan(){
+    this.isMouseOver = !this.isMouseOver;
   }
 
   constructor() { }
