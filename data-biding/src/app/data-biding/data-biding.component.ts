@@ -1,3 +1,5 @@
+import { OutputPropertyComponent } from './output-property.component';
+import { InputPropertyComponent } from './input-property.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -29,7 +31,7 @@ export class DataBidingComponent implements OnInit {
 
   onKeyup(event:KeyboardEvent){
     console.log(event)
-    this.conteudoAtual = (event.target).value;
+    this.conteudoAtual = (<HTMLInputElement>event.target).value;
   }
 
   onSave(valor:string){
@@ -38,6 +40,10 @@ export class DataBidingComponent implements OnInit {
 
   onMouseSpan(){
     this.isMouseOver = !this.isMouseOver;
+  }
+
+  onValorMudou(event){
+    console.log(event)
   }
 
   constructor() { }

@@ -5,11 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
+import { InputPropertyComponent } from './data-biding/input-property.component';
+import { OutputPropertyComponent } from './data-biding/output-property.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBidingComponent
+    DataBidingComponent,
+    InputPropertyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
