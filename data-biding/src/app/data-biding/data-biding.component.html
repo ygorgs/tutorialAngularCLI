@@ -1,4 +1,4 @@
-<!--<section class="property-biding">
+<section class="property-biding">
 
   <article>
     <h3>Interpolation</h3>
@@ -60,7 +60,7 @@
 
 </section>-->
 
-<!--<section class="two-way-biding">
+<section class="two-way-biding">
   <article>
     <h3>Two-way data biding</h3>
     <div>
@@ -85,7 +85,7 @@
         <p>Você digitou {{ nome }}</p>
     </div>
   </article>
-</section>-->
+</section>
 
 <section class="input-properties">
   <article>
@@ -96,6 +96,24 @@
     <br><br>
 
     <contador valor='10' (mudouValor)="onValorMudou($event)"></contador>
-
+    <br><br>
   </article>
-</section>  
+</section> 
+
+<section>
+      <h3>Materialize</h3>
+      <ul materialize="collapsible" class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+        </ul>
+</section> 

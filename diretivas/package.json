@@ -1,5 +1,5 @@
 {
-  "name": "data-biding",
+  "name": "diretivas",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -20,11 +20,8 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
-    "angular2-materialize": "^6.7.2",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-alpha.4",
     "core-js": "^2.4.1",
-    "jquery": "^2.2.4",
-    "materialize-css": "^0.98.1",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
