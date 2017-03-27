@@ -1,12 +1,33 @@
-<h4>Exemplo de Pipes</h4>
+<!--<h4>Exemplo de Pipes</h4>
 
 <p>Título: {{ livro.titulo | uppercase | lowercase | camelCase}}</p>
 <p>Estrelas: {{ livro.rating | number:'1.1-1' }}</p>
 <p>Número de Páginas: {{ livro.numeroPaginas | number }}</p>
-<p>Data de Lançamento: {{ livro.dataLancamento | date:'dd/MM/yyyy' }}</p>
+<p>Data de Lançamento: {{ livro.dataLancamento | date }}</p>
 <p>Preço: {{ livro.preco | currency:'BRL':true }}</p>
 <p>URL: {{ livro.url }}</p>
 
 <br>
 
-<p>Livro: {{ livro | json }}</p>
+<p>Livro: {{ livro | json }}</p>-->
+
+<h4>Exemplo de filtro</h4>
+
+<input type="text" [(ngModel)]="filtro">
+<br>
+<input type="text" #novoValor>
+<button (click)="addLivro(novoValor.value)">Add Livro</button>
+
+<br>
+
+<ul>
+  <li *ngFor="let livro of obterLivros()"> {{ livro }}</li>
+</ul>
+
+<br>
+
+<h4>Exemplo Assincrono</h4>
+
+<p>{{ valorAsync | async }}</p>
+
+<p>{{ valorAsync2 | async }}</p>
