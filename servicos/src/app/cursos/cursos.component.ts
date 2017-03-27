@@ -1,17 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CursosService} from './cursos.service';
+
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  styleUrls: ['./cursos.component.css'],
+  providers: [CursosService]
 })
 export class CursosComponent implements OnInit {
 
-  cursos: string[] = ['Angular 2', 'Java', 'NodeJS'];
+  cursos: string[] = [];
 
-  constructor() { }
+  constructor(private cursosService: CursosService) { }
 
   ngOnInit() {
+    this.cursos = this.cursosService.getCursos();
+  }
+
+  onAddCurso(curso: string){
+    this.cursosService.addCurso(curso);
   }
 
 }
