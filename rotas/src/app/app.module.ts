@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 // import { routing } from './app.routing';
 import { CursosModule } from "app/cursos/cursos.module";
 import { AppRoutingModule } from "app/app.routing.module";
+import { AlunosModule } from "app/alunos/alunos.module";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AppRoutingModule } from "app/app.routing.module";
     HttpModule,
     MaterializeModule,
     CursosModule,
+    AlunosModule,
     AppRoutingModule
     // routing
   ],
